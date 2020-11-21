@@ -1,71 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Kinh Cong Giao</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  <title>Kinh Catholic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the content */
-.content {
-  background-color: #ddd;
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
-}
-
-/* Style the footer */
-.footer {
+.dropdown-content {
+  display: none;
+  position: absolute;
   background-color: #f1f1f1;
-  padding: 10px;
+  min-width: 480px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
 </style>
 </head>
 <body>
+<!--(1) menu den -->
 
-<div class="topnav">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand" href="/">Kinh Công Giáo</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span class="navbar-toggler-icon"></span></button>
+</nav>
+
+<div class="container" style="margin-top:30px">
+  <div class="dropdown">
+    <h4><button onclick="myFunction()" class="dropbtn">Chọn Kinh :</button></h4>
+    <div id="myDropdown" class="dropdown-content">
+      <a onclick="getK01()">1.Kinh Lạy Cha</a>
+      <a onclick="getK02()">2.Kinh Kính mừng</a>
+      <a onclick="getK03()">3.Kinh Sáng danh</a>
+      <a onclick="getK04()">4.Kinh Tin kính</a>
+      <a onclick="getK05()">5.Kinh Tin cậy mến</a>
+      <a onclick="getK06()">6.Kinh Ăn năn tội</a>
+      <a onclick="getK07()">7.Kinh Hãy nhớ</a>
+      <a onclick="getK08()">8.Kinh Mười điều răn</a>
+      <a onclick="getK09()">9.Kinh Bảy phép bí tích</a>
+      <a onclick="getK10()">10.Sáu Điều răn Hội thánh</a>
+      <a onclick="getK11()">11.Các ngày Lễ buộc</a>
+      <a onclick="getK12()">12.Bảy ơn cả Chúa Thánh Thân</a>
+      <a onclick="getK13()">13.Bảy mối tội đầu</a>
+      <a onclick="getK14()">14.Luật ăn chay và kiêng thịt</a>
+    </div>
+  </div>
+
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+/* Khi chon 1 K hoc thi K chon cua id KdacChon se thay doi */
+</script>
+<h4 id="Kchon" style="color:Green;">1.Kinh Lạy Cha</h4>
+<br>
+<form>
+  <input onclick="viclicked()" checked type="radio" name="colors" id="nutvi"> Tiếng Việt. <input onclick="enclicked()" type="radio" name="colors" id="nuten"> Tiếng Anh.
+</form>
+<script>
+var x = document.getElementById("nutvi");
+var y = document.getElementById("nuten");
+var tiengc = "vi";
+function viclicked() {
+  x.checked=true;
+  tiengc = "vi";
+}  
+function enclicked() {
+  y.checked=true;
+  tiengc = "en";
+}  
+</script>
+<br>
+<table>
+	<tr>
+		<th><audio controls id="Knghe" source src="/mp3vi/k02.mp3" type="audio/mpeg" loop ></audio></th>
+		<th></th>
+	</tr>
+  <tr>
+    <th><form><input onclick="phatlai()" type="checkbox" id="plcheckb" name="plcheckb" value="pl" checked>  loop. </input> </form></th>
+	  <th><a id="Kxem" href ="/pdfvi/k02.pdf" target="_blank" type= "application/pdf"> Text </a></th>
+	</tr>
+</table>
+<br>
+<h5></h5>
+<script>
+var z = document.getElementById("plcheckb");
+z.checked=true;
+z.loop = true;
+var n = 1;
+
+function phatlai() { 
+  n = n + 1;
+  if ( n % 2 == 1 ) {
+    z.loop = true;
+	  document.getElementById("plcheckb").checked=true;
+	} else {
+	  z.loop = false;
+	  document.getElementById("plcheckb").checked=false;
+  }
+} 
+</script>
+
+<br>
+<hr>
+<script>
+function getK01() {
+  document.getElementById("Kchon").innerHTML="1.Kinh Lạy Cha";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k01.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k01.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k01.mp3";
+    document.getElementById("Kxem").src="/pdfen/k01.pdf";
+  }
+}
+
+function getK02() {
+  document.getElementById("Kchon").innerHTML="2.Kinh Kính mừng";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k02.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k02.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k02.mp3";
+    document.getElementById("Kxem").src="/pdfen/k02.pdf";
+  }
+ }
+function getK03() {
+  document.getElementById("Kchon").innerHTML="3.Kinh Sáng danh";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k03.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k03.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k03.mp3";
+    document.getElementById("Kxem").src="/pdfen/k03.pdf";
+  }
+}
+function getK04() {
+  document.getElementById("Kchon").innerHTML="4.Kinh Tin kính";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k04.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k04.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k04.mp3";
+    document.getElementById("Kxem").src="/pdfen/k04.pdf";
+  }
+}
+function getK05() {
+  document.getElementById("Kchon").innerHTML="5.Kinh Tin cậy mến";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k05.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k05.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k05.mp3";
+    document.getElementById("Kxem").src="/pdfen/k05.pdf";
+  }
+}
+function getK06() {
+  document.getElementById("Kchon").innerHTML="6.Kinh Ăn năn tội";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k06.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k06.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k06.mp3";
+    document.getElementById("Kxem").src="/pdfen/k06.pdf";
+  }
+}
+function getK07() {
+  document.getElementById("Kchon").innerHTML="7.Kinh Hãy nhớ";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k07.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k07.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k07.mp3";
+    document.getElementById("Kxem").src="/pdfen/k07.pdf";
+  }
+}
+function getK08() {
+  document.getElementById("Kchon").innerHTML="8.Kinh Mười điều răn";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k08.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k08.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k08.mp3";
+    document.getElementById("Kxem").src="/pdfen/k08.pdf";
+  }
+}
+function getK09() {
+  document.getElementById("Kchon").innerHTML="9.Kinh Bảy phép bí tích";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k09.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k09.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k09.mp3";
+    document.getElementById("Kxem").src="/pdfen/k09.pdf";
+  }
+}
+function getK10() {
+  document.getElementById("Kchon").innerHTML="10.Sáu Điều răn hội thánh";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k10.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k10.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k10.mp3";
+    document.getElementById("Kxem").src="/pdfen/k10.pdf";
+  }
+}
+function getK11() {
+  document.getElementById("Kchon").innerHTML="11.Các ngày Lễ buộc";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k11.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k11.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k11.mp3";
+    document.getElementById("Kxem").src="/pdfen/k11.pdf";
+  }
+}
+function getK12() {
+  document.getElementById("Kchon").innerHTML="12.Bảy ơn cả Chúa Thánh Thân";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k12.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k12.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k12.mp3";
+    document.getElementById("Kxem").src="/pdfen/k12.pdf";
+  }
+}
+function getK13() {
+  document.getElementById("Kchon").innerHTML="13.Bảy mối tội đầu";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k13.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k13.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k13.mp3";
+    document.getElementById("Kxem").src="/pdfen/k13.pdf";
+  }
+}
+function getK14() {
+  document.getElementById("Kchon").innerHTML="14.Luật ăn chay và kiêng thịt";
+  if (tiengc=="vi") {
+    document.getElementById("Knghe").src="/mp3vi/k14.mp3";
+    document.getElementById("Kxem").src="/pdfvi/k14.pdf";
+	} else {
+    document.getElementById("Knghe").src="/mp3en/k14.mp3";
+    document.getElementById("Kxem").src="/pdfen/k14.pdf";
+  }
+}
+
+
+</script>
+
+
+
+
+
+<br>
+<br>
+
+	</div>
+  
+  </div>
 </div>
+<br>
+<br>
 
-<div class="content">
-  <h2>CSS Template</h2>
-  <p>A topnav, content and a footer.</p>
-</div>
 
-<div class="footer">
-  <p>Footer</p>
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>Trang này do vantiensg2002@yahoo.com lập tháng 11/2020 chỉ để học kinh.</p>
 </div>
 
 </body>

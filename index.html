@@ -10,6 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <style>
+
 table {
   font-family: Times New Roman ;
   border-collapse: collapse;
@@ -20,7 +21,13 @@ td, th {
   border: 3px solid #dddddd;
   text-align: left;
   padding: 3px;
+
 }
+th {
+  text-align: center;
+
+}
+
 
 tr:nth-child(odd) {
   background-color: #dddddd;
@@ -78,7 +85,7 @@ tr:nth-child(odd) {
 	<div class="row">
 		<div class="col-sm-6">
 			<h3>Giáo Lý Dự Tòng Công Giáo</h3>
-				<p style="background-image:url('/pdf/dongcct.png');">
+				<p style="background-image:url('/dongcct.png');">
 				<br>
 				<br>
 				<br>
@@ -107,25 +114,44 @@ tr:nth-child(odd) {
       <a onclick="getK14()">14.Luật ăn chay và kiêng thịt</a>
     </div>
     <div id="myDropdown2" class="dropdown-content">
-		<a onclick="getK01b()">Bài 1 + 2 : Con Người Tìm Kiếm Thiên Chúa - Thiên Chúa Nói Với Loài Người</a>
-		<a onclick="getK02b()">Bài 3 + 4 : Đón Nhận Lời Chúa Và Thiên Chúa Tạo Dựng Trời Đất Muôn Vật</a>
-		<a onclick="getK03b()">Bài 5 + 6 : Loài Người Sa Ngã Và Thiên Chúa Chọn Các Tổ Phụ</a>
-		<a onclick="getK04b()">Bài 7 + 8 : Thiên Chúa Thiết Lập Giao Ước Và Chọn Gọi Các Tiên Tri</a>
-		<a onclick="getK05b()">Bài 9 +10 : Chúa Giêsu Sinh Ra - Ngài Sống Ẩn Dật Như Thế Nào</a>
-		<a onclick="getK06b()">Bài 11+12 : Chúa Giêsu Rao Giảng Nước Thiên Chúa Và Chúa Ba Ngôi</a>
-		<a onclick="getK07b()">Bài 13+14 : Tôn Thờ Thiên Chúa - Đức Tin, Đức Cậy Và Đức Mến</a>
-		<a onclick="getK08b()">Bài 15+16 : Sống Hiếu Thảo - Tôn Trọng Sự Sống Và Sống Trong Sạch</a>
-		<a onclick="getK09b()">Bài 17+18 : Sống Công Bằng - Tinh Thần Mới Trong Luật Cũ</a>
-		<a onclick="getK10b()">Bài 19+20 : Chúa Giêsu Chịu Chết, Sống Lại Và Ban Thánh Thần Cho Hội Thánh</a>
-		<a onclick="getK11b()">Bài 21+22 : Chúa Thánh Thần Nguồn Sống Và Màu Nhiệm Của Hội Thánh</a>
-		<a onclick="getK12b()">Bài 23+24 : Đặc Tính Hội Thánh Công Giáo - Các Chức Vụ Của Hội Thánh</a>
-		<a onclick="getK13b()">Bài 25+26 : Đức Maria Trong Mầu Nhiệm Hội Thánh - Năm Phụng Vụ</a>
-		<a onclick="getK14b()">Bài 27+28 : Ơn Chúa Và Bí Tích - Bí Tích Rửa Tội</a>
-		<a onclick="getK15b()">Bài 29+30 : Bí Tích Thêm Sức - Bí Tích Thánh Thể</a>
-		<a onclick="getK16b()">Bài 31+32 : Thánh Lễ - Bí Tích Giải Tội</a>
-		<a onclick="getK17b()">Bài 33+34 : Bí Tích Xức Dầu Bệnh Nhân - Bí Tích Truyền Chức Thánh</a>
-		<a onclick="getK18b()">Bài 35+36 : Bí Tích Hôn Nhân - Tứ Chung</a>
-		<a onclick="getK19b()">Bài 37+Kết: Trời Mới Đất Mới - Thế Giới Vĩnh Cửu - Lời Kết</a>
+		<a onclick="getK01b()">Bài 1  : Con Người Tìm Kiếm Thiên Chúa</a>
+		<a onclick="getK02b()">Bài 2  : Thiên Chúa Nói Với Loài Người</a>
+		<a onclick="getK03b()">Bài 3  : Đón Nhận Lời Chúa</a>
+		<a onclick="getK04b()">Bài 4  : Thiên Chúa Tạo Dựng Trời Đất Muôn Vật</a>
+		<a onclick="getK05b()">Bài 5  : Loài Người Sa Ngã</a>
+		<a onclick="getK06b()">Bài 6  : Thiên Chúa Chọn Các Tổ Phụ</a>
+		<a onclick="getK07b()">Bài 7  : Thiên Chúa Thiết Lập Giao Ước</a>
+		<a onclick="getK08b()">Bài 8  : Thiên Chúa Chọn Gọi Các Tiên Tri</a>
+		<a onclick="getK09b()">Bài 9  : Chúa Giêsu Sinh Ra</a>
+		<a onclick="getK10b()">Bài 10 : Ngài Sống Ẩn Dật Như Thế Nào</a>
+		<a onclick="getK11b()">Bài 11 : Chúa Giêsu Rao Giảng Nước Thiên Chúa</a>
+		<a onclick="getK12b()">Bài 12 : Chúa Ba Ngôi</a>
+		<a onclick="getK13b()">Bài 13 : Tôn Thờ Thiên Chúa</a>
+		<a onclick="getK14b()">Bài 14 : Đức Tin, Đức Cậy Và Đức Mến</a>
+		<a onclick="getK15b()">Bài 15 : Sống Hiếu Thảo</a>
+		<a onclick="getK16b()">Bài 16 : Tôn Trọng Sự Sống Và Sống Trong Sạch</a>
+		<a onclick="getK17b()">Bài 17 : Sống Công Bằng</a>
+		<a onclick="getK18b()">Bài 18 : Tinh Thần Mới Trong Luật Cũ</a>
+		<a onclick="getK19b()">Bài 19 : Chúa Giêsu Chịu Chết, Sống Lại</a>
+		<a onclick="getK20b()">Bài 20 : Chúa Giêsu Ban Thánh Thần Cho Hội Thánh</a>
+		<a onclick="getK21b()">Bài 21 : Chúa Thánh Thần Nguồn Sống</a>
+		<a onclick="getK22b()">Bài 22 : Màu Nhiệm Của Hội Thánh</a>
+		<a onclick="getK23b()">Bài 23 : Đặc Tính Hội Thánh Công Giáo</a>
+		<a onclick="getK24b()">Bài 24 : Các Chức Vụ Của Hội Thánh</a>
+		<a onclick="getK25b()">Bài 25 : Đức Maria Trong Mầu Nhiệm Hội Thánh</a>
+		<a onclick="getK26b()">Bài 26 : Năm Phụng Vụ</a>
+		<a onclick="getK27b()">Bài 27 : Ơn Chúa Và Bí Tích</a>
+		<a onclick="getK28b()">Bài 28 : Bí Tích Rửa Tội</a>
+		<a onclick="getK29b()">Bài 29 : Bí Tích Thêm Sức</a>
+		<a onclick="getK30b()">Bài 30 : Bí Tích Thánh Thể</a>
+		<a onclick="getK31b()">Bài 31 : Thánh Lễ</a>
+		<a onclick="getK32b()">Bài 32 : Bí Tích Giải Tội</a>
+		<a onclick="getK33b()">Bài 33 : Bí Tích Xức Dầu Bệnh Nhân</a>
+		<a onclick="getK34b()">Bài 34 : Bí Tích Truyền Chức Thánh</a>
+		<a onclick="getK35b()">Bài 35 : Bí Tích Hôn Nhân</a>
+		<a onclick="getK36b()">Bài 36 : Tứ Chung</a>
+		<a onclick="getK37b()">Bài 37: Trời Mới Đất Mới</a>
+		<a onclick="getK38b()">Bài 38+Kết: Thế Giới Vĩnh Cửu - Lời Kết</a>
 	  </div>
 	</div>
 
@@ -176,12 +202,12 @@ function enclicked() {
 <br>
 <table>
 	<tr>
-		<th><audio controls id="Knghe" source src="/mp3vi/k02.mp3" type="audio/mpeg" loop ></audio></th>
-		<th></th>
+		<th></th><th><audio controls id="Knghe" source src="/mp3vi/k02.mp3" type="audio/mpeg" loop ></audio></th><th></th>
 	</tr>
-  <tr>
-    <th><form><input onclick="phatlai()" type="checkbox" id="plcheckb" name="plcheckb" value="pl" checked>  loop. </input> </form></th>
-	  <th><a id="Kxem" href ="/pdfvi/k02.pdf" target="_blank" type= "application/pdf"> Text </a></th>
+  	<tr>
+    	<th><form><input onclick="phatlai()" type="checkbox" id="plcheckb" name="plcheckb" value="pl" checked>  loop. </input> </form></th>
+		<th></th>
+		<th><a id="Kxem" href ="/pdfvi/k02.pdf" target="_blank" type= "application/pdf"> Text </a></th>
 	</tr>
 </table>
 <br>
@@ -349,85 +375,156 @@ function getK14() {
 }
 
 function getK01b() {
-  	document.getElementById("Kchon").innerHTML="Bài 1+2 : Con Người Tìm Kiếm Thiên Chúa - Thiên Chúa Nói Với Loài Người";
+  	document.getElementById("Kchon").innerHTML="Bài 1  : Con Người Tìm Kiếm Thiên Chúa";
 	document.getElementById("Knghe").src="/pdf/b01.mp3";
 }
 function getK02b() {
-  	document.getElementById("Kchon").innerHTML="Bài 1+2 : Con Người Tìm Kiếm Thiên Chúa - Thiên Chúa Nói Với Loài Người";
+  	document.getElementById("Kchon").innerHTML="Bài 2  : Thiên Chúa Nói Với Loài Người";
 	document.getElementById("Knghe").src="/pdf/b02.mp3";
 }
 function getK03b() {
-  	document.getElementById("Kchon").innerHTML="Bài 3+4 : Đón Nhận Lời Chúa Và Thiên Chúa Tạo Dựng Trời Đất Muôn Vật";
+  	document.getElementById("Kchon").innerHTML="Bài 3  : Đón Nhận Lời Chúa";
 	document.getElementById("Knghe").src="/pdf/b03.mp3";
 }
-	
 function getK04b() {
-  	document.getElementById("Kchon").innerHTML="Bài 5+6 : Loài Người Sa Ngã Và Thiên Chúa Chọn Các Tổ Phụ";
-	document.getElementById("Knghe").src="/pdf/b5c6.mp3";
-}
-function getK04b() {
-  	document.getElementById("Kchon").innerHTML="Bài 7+8 : Thiên Chúa Thiết Lập Giao Ước Và Chọn Gọi Các Tiên Tri";
-	document.getElementById("Knghe").src="/pdf/b7c8.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 4  : Thiên Chúa Tạo Dựng Trời Đất Muôn Vật";
+	document.getElementById("Knghe").src="/pdf/b04.mp3";
 }
 function getK05b() {
-  	document.getElementById("Kchon").innerHTML="Bài 9+10 : Chúa Giêsu Sinh Ra - Ngài Sống Ẩn Dật Như Thế Nào";
-	document.getElementById("Knghe").src="/pdf/b9c10.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 5  : Loài Người Sa Ngã";
+	document.getElementById("Knghe").src="/pdf/b05.mp3";
 }
 function getK06b() {
-  	document.getElementById("Kchon").innerHTML="Bài 11+12 : Chúa Giêsu Rao Giảng Nước Thiên Chúa Và Chúa Ba Ngôi";
-	document.getElementById("Knghe").src="/pdf/b11c12.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 6  : Thiên Chúa Chọn Các Tổ Phụ";
+	document.getElementById("Knghe").src="/pdf/b06.mp3";
 }
 function getK07b() {
-  	document.getElementById("Kchon").innerHTML="Bài 13+14 : Tôn Thờ Thiên Chúa - Đức Tin, Đức Cậy Và Đức Mến";
-	document.getElementById("Knghe").src="/pdf/b13c14.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 7  : Thiên Chúa Thiết Lập Giao Ước";
+	document.getElementById("Knghe").src="/pdf/b07.mp3";
 }
 function getK08b() {
-  	document.getElementById("Kchon").innerHTML="Bài 15+16 : Sống Hiếu Thảo - Tôn Trọng Sự Sống Và Sống Trong Sạch";
-	document.getElementById("Knghe").src="/pdf/b15c16.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 8  : Thiên Chúa Chọn Gọi Các Tiên Tri";
+	document.getElementById("Knghe").src="/pdf/b08.mp3";
 }
 function getK09b() {
-  	document.getElementById("Kchon").innerHTML="Bài 17+18 : Sống Công Bằng - Tinh Thần Mới Trong Luật Cũ";
-	document.getElementById("Knghe").src="/pdf/b17c18.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 9  : Chúa Giêsu Sinh Ra";
+	document.getElementById("Knghe").src="/pdf/b09.mp3";
 }
 function getK10b() {
-  	document.getElementById("Kchon").innerHTML="Bài 19+20 : Chúa Giêsu Chịu Chết, Sống Lại Và Ban Thánh Thần Cho Hội Thánh";
-	document.getElementById("Knghe").src="/pdf/b19c20.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 10 : Ngài Sống Ẩn Dật Như Thế Nào";
+	document.getElementById("Knghe").src="/pdf/b10.mp3";
 }
 function getK11b() {
-  	document.getElementById("Kchon").innerHTML="Bài 21+22 : Chúa Thánh Thần Nguồn Sống Và Màu Nhiệm Của Hội Thánh";
-	document.getElementById("Knghe").src="/pdf/b21c22.mp3";
+  	document.getElementById("Kchon").innerHTML="Bài 11 : Chúa Giêsu Rao Giảng Nước Thiên Chúa";
+	document.getElementById("Knghe").src="/pdf/b11.mp3";
 }
 function getK12b() {
-  	document.getElementById("Kchon").innerHTML="Bài 23+24 : Đặc Tính Hội Thánh Công Giáo - Các Chức Vụ Của Hội Thánh";
-	document.getElementById("Knghe").src="/pdf/b23c24.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 12 : Chúa Ba Ngôi";
+	document.getElementById("Knghe").src="/pdf/b12.mp3";
 }
 function getK13b() {
-  	document.getElementById("Kchon").innerHTML="Bài 25+26 : Đức Maria Trong Mầu Nhiệm Hội Thánh - Năm Phụng Vụ";
-	document.getElementById("Knghe").src="/pdf/b25c26.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 13 : Tôn Thờ Thiên Chúa";
+	document.getElementById("Knghe").src="/pdf/b13.mp3";
 }
 function getK14b() {
-  	document.getElementById("Kchon").innerHTML="Bài 27+28 : Ơn Chúa Và Bí Tích - Bí Tích Rửa Tội";
-	document.getElementById("Knghe").src="/pdf/b27c28.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 14 : Đức Tin, Đức Cậy Và Đức Mến";
+	document.getElementById("Knghe").src="/pdf/b14.mp3";
 }
 function getK15b() {
-  	document.getElementById("Kchon").innerHTML="Bài 29+30 : Bí Tích Thêm Sức - Bí Tích Thánh Thể";
-	document.getElementById("Knghe").src="/pdf/b29c30.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 15 : Sống Hiếu Thảo";
+	document.getElementById("Knghe").src="/pdf/b15.mp3";
 }
 function getK16b() {
-  	document.getElementById("Kchon").innerHTML="Bài 31+32 : Thánh Lễ - Bí Tích Giải Tội";
-	document.getElementById("Knghe").src="/pdf/b31c32.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 16 : Tôn Trọng Sự Sống Và Sống Trong Sạch";
+	document.getElementById("Knghe").src="/pdf/b16.mp3";
 }
 function getK17b() {
-  	document.getElementById("Kchon").innerHTML="Bài 33+34 : Bí Tích Xức Dầu Bệnh Nhân - Bí Tích Truyền Chức Thánh";
-	document.getElementById("Knghe").src="/pdf/b33c34.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 17 : Sống Công Bằng";
+	document.getElementById("Knghe").src="/pdf/b17.mp3";
 }
 function getK18b() {
-  	document.getElementById("Kchon").innerHTML="Bài 35+36 : Bí Tích Hôn Nhân - Tứ Chung";
-	document.getElementById("Knghe").src="/pdf/b35c36.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 18 : Tinh Thần Mới Trong Luật Cũ";
+	document.getElementById("Knghe").src="/pdf/b18.mp3";
 }
 function getK19b() {
-  	document.getElementById("Kchon").innerHTML="Bài 37 + Kết Thúc : Trời Mới Đất Mới - Thế Giới Vĩnh Cửu - Lời Kết";
-	document.getElementById("Knghe").src="/pdf/b37ck.mp3";
+  document.getElementById("Kchon").innerHTML="Bài 19 : Chúa Giêsu Chịu Chết, Sống Lại";
+	document.getElementById("Knghe").src="/pdf/b19.mp3";
+}
+function getK20b() {
+  document.getElementById("Kchon").innerHTML="Bài 20 : Chúa Giêsu Ban Thánh Thần Cho Hội Thánh";
+	document.getElementById("Knghe").src="/pdf/b20.mp3";
+}
+function getK21b() {
+  document.getElementById("Kchon").innerHTML="Bài 21 : Chúa Thánh Thần Nguồn Sống";
+	document.getElementById("Knghe").src="/pdf/b21.mp3";
+}
+function getK22b() {
+  document.getElementById("Kchon").innerHTML="Bài 22 : Màu Nhiệm Của Hội Thánh";
+	document.getElementById("Knghe").src="/pdf/b22.mp3";
+}
+function getK23b() {
+  document.getElementById("Kchon").innerHTML="Bài 23 : Đặc Tính Hội Thánh Công Giáo";
+	document.getElementById("Knghe").src="/pdf/b23.mp3";
+}
+function getK24b() {
+  document.getElementById("Kchon").innerHTML="Bài 24 : Các Chức Vụ Của Hội Thánh";
+	document.getElementById("Knghe").src="/pdf/b24.mp3";
+}
+function getK25b() {
+  document.getElementById("Kchon").innerHTML="Bài 25 : Đức Maria Trong Mầu Nhiệm Hội Thánh";
+	document.getElementById("Knghe").src="/pdf/b25.mp3";
+}
+function getK26b() {
+  document.getElementById("Kchon").innerHTML="Bài 26 : Năm Phụng Vụ";
+	document.getElementById("Knghe").src="/pdf/b26.mp3";
+}
+function getK27b() {
+  document.getElementById("Kchon").innerHTML="Bài 27 : Ơn Chúa Và Bí Tích";
+	document.getElementById("Knghe").src="/pdf/b27.mp3";
+}
+function getK28b() {
+  document.getElementById("Kchon").innerHTML="Bài 28 : Bí Tích Rửa Tội";
+	document.getElementById("Knghe").src="/pdf/b28.mp3";
+}
+function getK29b() {
+  document.getElementById("Kchon").innerHTML="Bài 29 : Bí Tích Thêm Sức";
+	document.getElementById("Knghe").src="/pdf/b29.mp3";
+}
+function getK30b() {
+  document.getElementById("Kchon").innerHTML="Bài 30 : Bí Tích Thánh Thể";
+	document.getElementById("Knghe").src="/pdf/b30.mp3";
+}
+function getK31b() {
+  document.getElementById("Kchon").innerHTML="Bài 31 : Thánh Lễ";
+	document.getElementById("Knghe").src="/pdf/b31.mp3";
+}
+function getK32b() {
+  document.getElementById("Kchon").innerHTML="Bài 32 : Bí Tích Giải Tội";
+	document.getElementById("Knghe").src="/pdf/b32.mp3";
+}
+function getK33b() {
+  document.getElementById("Kchon").innerHTML="Bài 33 : Bí Tích Xức Dầu Bệnh Nhân";
+	document.getElementById("Knghe").src="/pdf/b33.mp3";
+}
+function getK34b() {
+  document.getElementById("Kchon").innerHTML="Bài 34 : Bí Tích Truyền Chức Thánh";
+	document.getElementById("Knghe").src="/pdf/b34.mp3";
+}
+function getK35b() {
+  document.getElementById("Kchon").innerHTML="Bài 35 : Bí Tích Hôn Nhân";
+	document.getElementById("Knghe").src="/pdf/b35.mp3";
+}
+function getK36b() {
+  document.getElementById("Kchon").innerHTML="Bài 36 : Tứ Chung";
+	document.getElementById("Knghe").src="/pdf/b36.mp3";
+}
+function getK37b() {
+  document.getElementById("Kchon").innerHTML="Bài 37: Trời Mới Đất Mới";
+	document.getElementById("Knghe").src="/pdf/b37.mp3";
+}
+function getK38b() {
+  document.getElementById("Kchon").innerHTML="Bài 38+Kết: Thế Giới Vĩnh Cửu - Lời Kết";
+	document.getElementById("Knghe").src="/pdf/b38.mp3";
 }
 
 </script>
@@ -438,45 +535,21 @@ function getK19b() {
 
 <br>
 <table>
-	<tr><th> Nhạc Công Giáo </th><th>.</th></tr>
+	<tr><th></th><th> Nhạc Công Giáo Tuyển Chọn</th><th></th></tr>
 	<tr><th></th><th></th></tr>
   
-	<tr><th>1•<a href ="https://.mp3">ten  bai hat</a></th>
+	<tr><th>1•</th><th><a href ="">Jingle Bells with Lyrics</a></th>
 	  <th></th>
 	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>2•<a href ="https://.mp3">ten  bai hat</a></th>
+	<tr><th></th><th></th><th></th></tr>
+	<tr><th>2•</th><th><a href ="https://.mp3">ten  bai hat</a></th>
 	  <th></th>
 	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>3•<a href ="https://.mp3">ten  bai hat</a></th>
+	<tr><th></th><th></th><th></th></tr>
+	<tr><th>3•</th><th><a href ="https://.mp3">ten  bai hat</a></th>
 	  <th></th>
 	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>4•<a href ="https://.mp3">ten  bai hat</a></th>
-	  <th></th>
-	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>5•<a href ="https://.mp3">ten  bai hat</a></th>
-	  <th></th>
-	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>6•<a href ="https://.mp3">ten  bai hat</a></th>
-	  <th></th>
-	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>7•<a href ="https://.mp3">ten  bai hat</a></th>
-	  <th></th>
-	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>8•<a href ="https://.mp3">ten  bai hat</a></th>
-	  <th></th>
-	</tr>
-	<tr><th></th><th></th></tr>
-	<tr><th>9•<a href ="https://.mp3">ten  bai hat</a></th>
-	  <th></th>
-	</tr>
-	<tr><th></th><th></th></tr>
+	<tr><th></th><th></th><th></th></tr>
   
   </table>
   
